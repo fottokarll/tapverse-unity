@@ -45,6 +45,7 @@ namespace TapVerse
             particleObj.transform.SetParent(systems.transform);
             var particle = particleObj.AddComponent<ParticleSystem>();
 
+
             feedback.Configure(pool, particle);
 
             var upgradeCatalog = Resources.Load<TapVerse.Gameplay.Definitions.UpgradeCatalog>("Catalogs/UpgradeCatalog");
@@ -66,5 +67,6 @@ namespace TapVerse
             go.SetActive(false);
             return go;
         }
+
     }
 }
