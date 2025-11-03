@@ -1,3 +1,4 @@
+
 using TapVerse.Core;
 using TapVerse.Gameplay.Definitions;
 using TapVerse.Services;
@@ -28,8 +29,7 @@ namespace TapVerse.Gameplay
         {
             _audioService = ServiceLocator.Resolve<IAudioService>();
             _hapticsService = ServiceLocator.Resolve<IHapticsService>();
-            var tapClip = Resources.Load<AudioClip>("Audio/tap");
-            var critClip = Resources.Load<AudioClip>("Audio/crit");
+
             _audioService?.Initialize(tapClip, critClip);
         }
 
