@@ -30,6 +30,7 @@ namespace TapVerse.Gameplay
             _audioService = ServiceLocator.Resolve<IAudioService>();
             _hapticsService = ServiceLocator.Resolve<IHapticsService>();
 
+
             _audioService?.Initialize(tapClip, critClip);
         }
 
