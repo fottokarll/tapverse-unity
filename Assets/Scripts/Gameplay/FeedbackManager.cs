@@ -1,4 +1,4 @@
-using TapVerse.Audio;
+
 using TapVerse.Core;
 using TapVerse.Gameplay.Definitions;
 using TapVerse.Services;
@@ -30,8 +30,7 @@ namespace TapVerse.Gameplay
             _audioService = ServiceLocator.Resolve<IAudioService>();
             _hapticsService = ServiceLocator.Resolve<IHapticsService>();
 
-            var tapClip = ProceduralAudio.CreateSinePing("TapSfx", 660f, 0.085f, 0.45f, 0.02f, 0.35f);
-            var critClip = ProceduralAudio.CreateSinePing("CritSfx", 880f, 0.14f, 0.6f, 0.01f, 0.55f);
+
             _audioService?.Initialize(tapClip, critClip);
         }
 
