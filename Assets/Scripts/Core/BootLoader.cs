@@ -2,7 +2,7 @@ using System.Collections;
 using TapVerse.Core;
 using TapVerse.Gameplay;
 using TapVerse.Services;
-using TapVerse.Visuals;
+
 using UnityEngine;
 
 namespace TapVerse
@@ -45,7 +45,7 @@ namespace TapVerse
             var particleObj = new GameObject("TapParticles");
             particleObj.transform.SetParent(systems.transform);
             var particle = particleObj.AddComponent<ParticleSystem>();
-            ConfigureTapParticles(particle);
+
 
             feedback.Configure(pool, particle);
 
@@ -69,39 +69,6 @@ namespace TapVerse
             return go;
         }
 
-        private void ConfigureTapParticles(ParticleSystem particle)
-        {
-            var main = particle.main;
-            main.loop = false;
-            main.startLifetime = 0.35f;
-            main.startSpeed = new ParticleSystem.MinMaxCurve(1.5f, 3f);
-            main.startSize = new ParticleSystem.MinMaxCurve(0.05f, 0.2f);
-            main.startColor = new ParticleSystem.MinMaxGradient(new Color(0.9f, 0.9f, 1f, 0.9f), new Color(0.4f, 0.6f, 1f, 0.4f));
 
-            var emission = particle.emission;
-            emission.rateOverTime = 0f;
-            emission.burstCount = 1;
-            emission.SetBurst(0, new ParticleSystem.Burst(0f, (short)8, (short)12));
-
-            var shape = particle.shape;
-            shape.shapeType = ParticleSystemShapeType.Circle;
-            shape.radius = 0.1f;
-
-            var texture = ProceduralSprites.GetSparkTexture();
-            var renderer = particle.GetComponent<ParticleSystemRenderer>();
-            renderer.material = new Material(Shader.Find("Sprites/Default"));
-            renderer.material.mainTexture = texture;
-
-            var animation = particle.textureSheetAnimation;
-            animation.enabled = true;
-            animation.mode = ParticleSystemAnimationMode.Sprites;
-            for (var i = animation.spriteCount - 1; i >= 0; i--)
-            {
-                animation.RemoveSprite(i);
-            }
-            animation.AddSprite(ProceduralSprites.GetSparkSprite());
-
-            particle.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-        }
     }
 }
