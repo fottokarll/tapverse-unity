@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TapVerse.Core;
 using TapVerse.Gameplay;
 using TapVerse.Gameplay.Definitions;
-using TapVerse.Visuals;
+
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -99,8 +99,7 @@ namespace TapVerse.UI
             coreRect.anchorMax = new Vector2(0.5f, 0.5f);
             coreRect.anchoredPosition = Vector2.zero;
             var image = coreGO.AddComponent<Image>();
-            image.color = new Color(1f, 1f, 1f, 0.9f);
-            coreGO.AddComponent<UniverseCoreSetup>();
+
 
             // Bottom tab area
             var tabRoot = CreatePanel(canvasGO.transform, "TabRoot", new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 120f));
