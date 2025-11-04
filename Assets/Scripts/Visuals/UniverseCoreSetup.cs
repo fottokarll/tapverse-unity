@@ -1,4 +1,4 @@
-using TapVerse.Gameplay;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,15 +18,7 @@ namespace TapVerse.Visuals
                 image.raycastTarget = true;
             }
 
-            EnsureTapInputHandler();
-        }
 
-        private void EnsureTapInputHandler()
-        {
-            if (!TryGetComponent<TapInputHandler>(out _))
-            {
-                gameObject.AddComponent<TapInputHandler>();
-            }
         }
     }
 }

@@ -1,0 +1,18 @@
+{
+  "name": "Tapverse.Gameplay",
+  "references": [
+    "GUID:7787866bd4e948a2a034d79da213419c",
+    "GUID:bcd68aeb17414da29ddb9b35059bd5f0",
+    "GUID:abff720251404dd1b531bbadf0013300",
+    "GUID:b3d783b3cbb94ddaaa25028bf5f081a4"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
