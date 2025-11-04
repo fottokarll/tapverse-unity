@@ -1,0 +1,15 @@
+{
+  "name": "Tapverse.Services",
+  "references": [
+    "GUID:7787866bd4e948a2a034d79da213419c"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
