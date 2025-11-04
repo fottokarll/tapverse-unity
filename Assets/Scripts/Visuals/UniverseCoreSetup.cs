@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,7 @@ namespace TapVerse.Visuals
             {
                 image.raycastTarget = true;
             }
+
 
         }
     }
