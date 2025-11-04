@@ -1,0 +1,17 @@
+{
+  "name": "Tapverse.UI",
+  "references": [
+    "GUID:7787866bd4e948a2a034d79da213419c",
+    "GUID:fa7263122d104030b001df98aa2bd501",
+    "GUID:b3d783b3cbb94ddaaa25028bf5f081a4"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
